@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+</head>
+
+<body>
+    <center><br><br><br>
+        <div style="text-align: center; border: thick solid rgb(248, 17, 17); width: 500px;height:500px;">
+            <h1 style="text-align: center;">Nikhitha To Do List</h1>
+            <script>
+                function addItem() {
+                    var a = document.getElementById("list");
+                    var candidate = document.getElementById("candidate");
+                    var li = document.createElement("li");
+                    li.setAttribute("id", candidate.value);
+                    li.appendChild(document.createTextNode(candidate.value));
+                    a.appendChild(li);
+                }
+                //creating a function to remove item from list
+                function removeItem() {
+                    //deciaring variable to not select element
+                    var a = document.getElementById("list");
+                    var item = document.getElementById("candidate");
+                    var item = document.getElementById(candidate.value);
+                    a.removeChild(item);
+                }
+            </script>
+            <input type="text" id="candidate"/><button onclick="addItem()" class="buttonclass">Add item</button><br><br>
+            <ul id="list"></ul>
+            <button onclick="removeItem()" class="buttonclass">Remove item</button>
+        </div>
+
+
+    </center>
+
+</body>
+
+</html>
